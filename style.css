@@ -88,7 +88,6 @@ ul li::before {
     left: 10px;
     transform: translateY(-50%);
 }
-
 #input-box {
     font-size: 18px;
     font-weight: bold; 
@@ -97,22 +96,12 @@ ul li::before {
     border-radius: 5px;
     color: black;
 }
-ul li.checked {
-    position: relative;
+ul li.checked{
     color: black;
-  }  
-ul li.checked::before{
-    background-image: url("./pink\ tick\ mark.png");
-    
+    text-decoration: line-through;
 }
-ul li.checked::after {
-    content: '';
-    position: absolute;
-    left: 45px;
-    top: 50%;
-    height: 2px;
-    background-color: black;
-    width: 0;
+ul li.checked::before{
+    background-image: url("./pink\ tick\ mark.png");  
 }
 ul li span {
     position: absolute;
@@ -128,8 +117,8 @@ ul li span {
     justify-content: center;
     cursor: pointer;
 }
-
 ul li span:hover {
     background: #ccf1ff;
     border-radius: 5px;
+    animation: wiggle 0.3s ease-in-out;
 }
